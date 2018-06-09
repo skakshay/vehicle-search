@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+<head>
+	<title>Search Vehicle</title>
+
+	<link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+	<script src="{% static 'js/car_search.js' %}"> </script>
+	
+	<style type="text/css">
+		#id_search_string{
+			width:400px;
+		}
+	</style>
+
+	<script >
+		var searchURL = "{% url 'search_model' %}";
+		var selectURL = "{% url 'ajax_select_model' %}";
+	</script>
+</head>
+
+<body>
+	{{form.as_p}}
+</body>
+</html>
+
+
